@@ -57,10 +57,7 @@ class GestureRecognizer extends Component {
   }
 
   _gestureIsClick(gestureState) {
-    return (
-      Math.abs(gestureState.dx) < swipeConfig.gestureIsClickThreshold &&
-      Math.abs(gestureState.dy) < swipeConfig.gestureIsClickThreshold
-    );
+    return Math.abs(gestureState.dy) < swipeConfig.gestureIsClickThreshold;
   }
 
   _handlePanResponderEnd(evt, gestureState) {
